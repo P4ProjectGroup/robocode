@@ -10,3 +10,6 @@ ucdetector_reports
 *.class
 .recommenders
 .sonarlint
+.idea
+*.iml
+out/
