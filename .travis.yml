@@ -7,3 +7,4 @@ cache:
   - $HOME/.m2
 before_install: mvn checkstyle:check
 script: xvfb-run mvn test -B
+after_script: cobertura:check
