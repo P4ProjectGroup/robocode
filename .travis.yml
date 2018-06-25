@@ -5,6 +5,6 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-before_install: mvn checkstyle:check
+before_install: mvn checkstyle:check@validate
 script: xvfb-run mvn test -B
 after_script: cobertura:check
