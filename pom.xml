@@ -65,7 +65,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 						<id>validate</id>
 						<phase>validate</phase>
 						<configuration>
-							<configLocation>checkstyle.xml</configLocation>
+							<configLocation>google_checks.xml</configLocation>
 							<consoleOutput>true</consoleOutput>
 							<failsOnError>false</failsOnError>
 						</configuration>
