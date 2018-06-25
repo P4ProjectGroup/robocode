@@ -6,4 +6,4 @@ cache:
   - .autoconf
   - $HOME/.m2
 script: xvfb-run mvn test -B
-after_script: cobertura:cobertura-check
+after_script: cobertura:cobertura
