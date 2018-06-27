@@ -28,7 +28,7 @@ public class TestFileWriteSize extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.FileWriteSize,sample.Target";
+		return "FileWriteSize,sample.Target";
 	}
 	
 	@Override

@@ -36,7 +36,7 @@ public class TestEventPriorityFilter extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.EventPriorityFilter,tested.robots.EventPriorityFilter";
+		return "EventPriorityFilter,EventPriorityFilter";
 	}
 
 	@Override

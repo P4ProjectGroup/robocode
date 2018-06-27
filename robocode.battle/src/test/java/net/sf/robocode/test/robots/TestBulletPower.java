@@ -25,7 +25,7 @@ public class TestBulletPower extends RobocodeTestBed {
 	}
 
 	public String getRobotNames() {
-		return "sample.Target,tested.robots.BadFirePower";
+		return "sample.Target,BadFirePower";
 	}
 
 	@Override

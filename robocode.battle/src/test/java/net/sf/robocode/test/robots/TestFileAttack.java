@@ -33,22 +33,22 @@ public class TestFileAttack extends RobocodeTestBed {
 		super.onTurnEnded(event);
 		final String out = event.getTurnSnapshot().getRobots()[1].getOutputStreamSnapshot();
 
-		if (out.contains("Preventing tested.robots.FileAttack from access: (java.io.FilePermission C:\\MSDOS.SYS read)")
+		if (out.contains("Preventing FileAttack from access: (java.io.FilePermission C:\\MSDOS.SYS read)")
 				|| out.contains(
-						"Preventing tested.robots.FileAttack from access: (\"java.io.FilePermission\" \"C:\\MSDOS.SYS\" \"read\")")) {
+						"Preventing FileAttack from access: (\"java.io.FilePermission\" \"C:\\MSDOS.SYS\" \"read\")")) {
 			messagedRead = true;
 		}
 		if (out.contains(
-				"Preventing tested.robots.FileAttack from access: (java.io.FilePermission C:\\Robocode.attack write)")
+				"Preventing FileAttack from access: (java.io.FilePermission C:\\Robocode.attack write)")
 						|| out.contains(
-								"Preventing tested.robots.FileAttack from access: (\"java.io.FilePermission\" \"C:\\Robocode.attack\" \"write\")")) {
+								"Preventing FileAttack from access: (\"java.io.FilePermission\" \"C:\\Robocode.attack\" \"write\")")) {
 			messagedWrite = true;
 		}
 	}
 
 	@Override
 	public String getRobotNames() {
-		return "sample.Fire,tested.robots.FileAttack";
+		return "sample.Fire,FileAttack";
 	}
 
 	@Override

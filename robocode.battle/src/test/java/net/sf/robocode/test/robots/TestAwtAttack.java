@@ -43,7 +43,7 @@ public class TestAwtAttack extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.BattleLost,tested.robots.AwtAttack";
+		return "BattleLost,AwtAttack";
 	}
 
 	JFrame frame;

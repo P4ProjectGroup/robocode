@@ -21,7 +21,7 @@ public class TestRobotDeathEvents extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.RobotDeathEvents,sample.Crazy,sample.Target,sample.Target,sample.Target";
+		return "RobotDeathEvents,sample.Crazy,sample.Target,sample.Target,sample.Target";
 	}
 
 	@Override

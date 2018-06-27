@@ -25,7 +25,7 @@ public class TestGunHeat extends RobocodeTestBed {
 	}
 
 	public String getRobotNames() {
-		return "sample.Target,tested.robots.GunHeat";
+		return "sample.Target,GunHeat";
 	}
 
 	@Override

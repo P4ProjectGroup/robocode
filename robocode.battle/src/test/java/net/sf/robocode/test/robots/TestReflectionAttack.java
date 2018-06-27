@@ -22,7 +22,7 @@ public class TestReflectionAttack extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ReflectionAttack,sample.Target";
+		return "ReflectionAttack,sample.Target";
 	}
 
 	@Override

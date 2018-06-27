@@ -31,7 +31,7 @@ public class TestConstructorThreadAttack extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ConstructorThreadAttack,sample.Target";
+		return "ConstructorThreadAttack,sample.Target";
 	}
 
 	@Override

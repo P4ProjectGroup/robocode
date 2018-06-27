@@ -25,7 +25,7 @@ public class TestThreadAttack extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ThreadAttack,sample.SittingDuck";
+		return "ThreadAttack,sample.SittingDuck";
 	}
 
 	@Override

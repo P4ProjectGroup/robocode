@@ -22,7 +22,7 @@ public class TestConstructorReflectionAttack extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ConstructorReflectionAttack,sample.Target";
+		return "ConstructorReflectionAttack,sample.Target";
 	}
 
 	@Override

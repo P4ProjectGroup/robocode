@@ -23,7 +23,7 @@ public class TestBodyTurnRate extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.BodyTurnRate,sample.Target";        
+		return "BodyTurnRate,sample.Target";
 	}
 
 	@Override

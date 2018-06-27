@@ -33,7 +33,7 @@ public class TestAcceleration extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.DecelerationCaveat1,tested.robots.DecelerationCaveat2,tested.robots.DecelerationCaveat3";        
+		return "DecelerationCaveat1,DecelerationCaveat2,DecelerationCaveat3";
 	}
 
 	@Override

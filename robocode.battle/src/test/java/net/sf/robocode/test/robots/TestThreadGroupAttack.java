@@ -29,7 +29,7 @@ public class TestThreadGroupAttack extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ThreadGroupAttack,sample.SittingDuck";
+		return "ThreadGroupAttack,sample.SittingDuck";
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class TestThreadGroupAttack extends RobocodeTestBed {
 			messagedInterrupted = true;
 		}
 
-		if (out.contains("Preventing tested.robots.ThreadGroupAttack from access to sample.SittingDuck")) {
+		if (out.contains("Preventing ThreadGroupAttack from access to sample.SittingDuck")) {
 			messagedPreventing = true;
 		}
 	}

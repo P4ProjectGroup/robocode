@@ -38,7 +38,7 @@ public class TestPrivateConstructor extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "sample.Fire,tested.robots.PrivateConstructor";
+		return "sample.Fire,PrivateConstructor";
 	}
 
 	@Override

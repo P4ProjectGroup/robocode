@@ -22,7 +22,7 @@ public class TestFileOutputStreamAttack extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.FileOutputStreamAttack,sample.Target";
+		return "FileOutputStreamAttack,sample.Target";
 	}
 
 	@Override

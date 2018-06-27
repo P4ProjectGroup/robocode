@@ -23,7 +23,7 @@ public class TestMaxTurnRate extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.MaxTurnRate,sample.Target";        
+		return "MaxTurnRate,sample.Target";
 	}
 
 	@Override

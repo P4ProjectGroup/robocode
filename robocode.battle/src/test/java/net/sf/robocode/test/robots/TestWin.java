@@ -38,7 +38,7 @@ public class TestWin extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "sample.MyFirstRobot,tested.robots.BattleWin";        
+		return "sample.MyFirstRobot,BattleWin";
 	}
 
 	@Override
@@ -60,24 +60,24 @@ public class TestWin extends RobocodeTestBed {
 
 		Assert.assertThat(lines[1], is("Round 1 of 5"));
 		Assert.assertThat(lines[3], is("RoundEnded!"));
-		Assert.assertThat(lines[4], is("SYSTEM: tested.robots.BattleWin has died"));
+		Assert.assertThat(lines[4], is("SYSTEM: BattleWin has died"));
 		Assert.assertThat(lines[5], is("Death!"));
 		Assert.assertThat(lines[7], is("Round 2 of 5"));
 		Assert.assertThat(lines[9], is("RoundEnded!"));
-		Assert.assertThat(lines[10], is("SYSTEM: tested.robots.BattleWin has died"));
+		Assert.assertThat(lines[10], is("SYSTEM: BattleWin has died"));
 		Assert.assertThat(lines[11], is("Death!"));
 		Assert.assertThat(lines[13], is("Round 3 of 5"));
 		Assert.assertThat(lines[15], is("SYSTEM: Bonus for killing sample.MyFirstRobot: 1"));
-		Assert.assertThat(lines[16], is("SYSTEM: tested.robots.BattleWin wins the round."));
+		Assert.assertThat(lines[16], is("SYSTEM: BattleWin wins the round."));
 		Assert.assertThat(lines[17], is("RoundEnded!"));
 		Assert.assertThat(lines[18], is("Win!"));
 		Assert.assertThat(lines[20], is("Round 4 of 5"));
 		Assert.assertThat(lines[22], is("SYSTEM: Bonus for killing sample.MyFirstRobot: 3"));
-		Assert.assertThat(lines[23], is("SYSTEM: tested.robots.BattleWin wins the round."));
+		Assert.assertThat(lines[23], is("SYSTEM: BattleWin wins the round."));
 		Assert.assertThat(lines[24], is("RoundEnded!"));
 		Assert.assertThat(lines[25], is("Win!"));
 		Assert.assertThat(lines[27], is("Round 5 of 5"));
-		Assert.assertThat(lines[29], is("SYSTEM: tested.robots.BattleWin wins the round."));
+		Assert.assertThat(lines[29], is("SYSTEM: BattleWin wins the round."));
 		Assert.assertThat(lines[30], is("RoundEnded!"));
 		Assert.assertThat(lines[31], is("Win!"));
 		Assert.assertThat(lines[32], is("BattleEnded!"));

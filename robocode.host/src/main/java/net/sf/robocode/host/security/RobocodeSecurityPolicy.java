@@ -98,14 +98,10 @@ public class RobocodeSecurityPolicy extends Policy {
 			return true;
 		}
 
-		return AccessController.doPrivileged(new PrivilegedAction<Boolean>() {
-			public Boolean run() {
-				return impliesRobot(permission);
-			}
-		});
+		return AccessController.doPrivileged(new BooleanPrivilegedAction(this, permission));
 	}
 
-	private boolean impliesRobot(Permission perm) {
+	protected boolean impliesRobot(Permission perm) {
 		// For development purposes, allow read any file if override is set.
 		final String actions = perm.getActions();
 		final String name = perm.getName();
@@ -323,4 +319,5 @@ public class RobocodeSecurityPolicy extends Policy {
 			Logger.logError(e);
 		}
 	}
+
 }

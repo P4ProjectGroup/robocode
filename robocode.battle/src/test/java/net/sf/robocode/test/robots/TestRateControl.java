@@ -37,7 +37,7 @@ public class TestRateControl extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.RateControl,sample.Target";
+		return "RateControl,sample.Target";
 	}
 	
 	@Override

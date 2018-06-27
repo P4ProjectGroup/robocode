@@ -38,7 +38,7 @@ public class TestInteruptibleEvent extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.InteruptibleEvent,tested.robots.InteruptibleEvent";
+		return "InteruptibleEvent,InteruptibleEvent";
 	}
 
 	@Override

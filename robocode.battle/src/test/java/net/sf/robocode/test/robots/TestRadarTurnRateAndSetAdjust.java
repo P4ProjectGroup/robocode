@@ -23,7 +23,7 @@ public class TestRadarTurnRateAndSetAdjust extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.RadarTurnRateAndSetAdjust,sample.Target";        
+		return "RadarTurnRateAndSetAdjust,sample.Target";
 	}
 
 	@Override

@@ -12,9 +12,11 @@ import java.net.URL;
 import java.net.URLClassLoader;
 import java.security.AccessController;
 import java.security.PrivilegedAction;
+import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Set;
 import java.io.File;
+import java.util.Stack;
 
 import net.sf.robocode.io.RobocodeProperties;
 
@@ -55,7 +57,6 @@ public class EngineClassLoader extends URLClassLoader {
 	}
 
 	public synchronized Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
-
 		if (RobocodeProperties.isSecurityOff() || name.startsWith("java.lang")) {
 			return super.loadClass(name, resolve);
 		}

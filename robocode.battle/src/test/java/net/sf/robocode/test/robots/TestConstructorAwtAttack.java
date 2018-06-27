@@ -26,7 +26,7 @@ public class TestConstructorAwtAttack extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ConstructorAwtAttack,tested.robots.BattleLost";
+		return "ConstructorAwtAttack,BattleLost";
 	}
 
 	/* in case that we don't block JFrame by classloader

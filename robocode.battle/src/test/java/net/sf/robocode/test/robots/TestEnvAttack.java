@@ -27,7 +27,7 @@ public class TestEnvAttack extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.BattleLost,tested.robots.EnvAttack";
+		return "BattleLost,EnvAttack";
 	}
 
 	@Override

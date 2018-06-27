@@ -26,7 +26,7 @@ public class TestJunior extends RobocodeTestBed {
 	}
 
 	public String getRobotNames() {
-		return "tested.robots.JuniorEvents,sample.SittingDuck";
+		return "JuniorEvents,sample.SittingDuck";
 	}
 
 	public void onTurnEnded(TurnEndedEvent event) {

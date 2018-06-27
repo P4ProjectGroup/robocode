@@ -22,7 +22,7 @@ public class TestMaxVelocity extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.MaxVelocity,sample.Target";        
+		return "MaxVelocity,sample.Target";
 	}
 
 	@Override

@@ -23,7 +23,7 @@ public class TestConstructorSocketAttack extends RobocodeTestBed {
 	
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ConstructorSocketAttack,sample.Target";
+		return "ConstructorSocketAttack,sample.Target";
 	}
 
 	@Override

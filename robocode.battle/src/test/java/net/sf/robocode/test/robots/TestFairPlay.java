@@ -32,7 +32,7 @@ public class TestFairPlay extends RobocodeTestBed {
 	}
 
 	public String getRobotNames() {
-		return "tested.robots.FairPlay,tested.robots.FairPlay";
+		return "FairPlay,FairPlay";
 	}
 
 	@Override

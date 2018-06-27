@@ -22,7 +22,7 @@ public class TestReverseDirection extends RobocodeTestBed {
 
 	@Override
 	public String getRobotNames() {
-		return "tested.robots.ReverseDirection,sample.Target";        
+		return "ReverseDirection,sample.Target";
 	}
 
 	@Override
