@@ -173,7 +173,7 @@ class BattleRecordInfo implements Serializable, IXmlSerializable {
 
 		private BattleResultsWrapper(BattleResults results) {
 			super(results.getTeamLeaderName(), results.getRank(), results.getScore(), results.getSurvival(),
-					results.getLastSurvivorBonus(), results.getBulletDamage(), results.getBulletDamageBonus(),
+					results.getLastSurvivorBonus(), results.getBulletDamageResult(), results.getBulletDamageBonus(),
 					results.getRamDamage(), results.getRamDamageBonus(), results.getFirsts(), results.getSeconds(),
 					results.getThirds());
 		}
@@ -185,7 +185,7 @@ class BattleRecordInfo implements Serializable, IXmlSerializable {
 				writer.writeAttribute("score", score, options.trimPrecision);
 				writer.writeAttribute("survival", survival, options.trimPrecision);
 				writer.writeAttribute("lastSurvivorBonus", lastSurvivorBonus, options.trimPrecision);
-				writer.writeAttribute("bulletDamage", bulletDamage, options.trimPrecision);
+				writer.writeAttribute("bulletDamage", getBulletDamage(), options.trimPrecision);
 				writer.writeAttribute("bulletDamageBonus", bulletDamageBonus, options.trimPrecision);
 				writer.writeAttribute("ramDamage", ramDamage, options.trimPrecision);
 				writer.writeAttribute("ramDamageBonus", ramDamageBonus, options.trimPrecision);
@@ -232,7 +232,7 @@ class BattleRecordInfo implements Serializable, IXmlSerializable {
 					});
 					reader.expect("bulletDamage", new XmlReader.Attribute() {
 						public void read(String value) {
-							rules.bulletDamage = Double.parseDouble(value);
+							rules.setBulletDamage(Double.parseDouble(value));
 						}
 					});
 					reader.expect("bulletDamageBonus", new XmlReader.Attribute() {

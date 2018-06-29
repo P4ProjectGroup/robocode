@@ -144,10 +144,10 @@ public class TestDuplicatesAndScore extends RobocodeTestBed {
 		Assert.assertThat(results[2].getBulletDamageBonus(), is(0));
 		Assert.assertThat(results[3].getBulletDamageBonus(), is(0));
 
-		Assert.assertThat(results[0].getBulletDamage(), is(513));
-		Assert.assertThat(results[1].getBulletDamage(), is(280));
-		Assert.assertThat(results[2].getBulletDamage(), is(89));
-		Assert.assertThat(results[3].getBulletDamage(), is(48));
+		Assert.assertThat(results[0].getBulletDamageResult(), is(513));
+		Assert.assertThat(results[1].getBulletDamageResult(), is(280));
+		Assert.assertThat(results[2].getBulletDamageResult(), is(89));
+		Assert.assertThat(results[3].getBulletDamageResult(), is(48));
 
 		Assert.assertThat(results[0].getScore(), is(1206));
 		Assert.assertThat(results[1].getScore(), is(650));

@@ -34,7 +34,7 @@ public class BattleResults implements java.io.Serializable, Comparable<BattleRes
 	protected double score;
 	protected double survival;
 	protected double lastSurvivorBonus;
-	protected double bulletDamage;
+	private double bulletDamage;
 	protected double bulletDamageBonus;
 	protected double ramDamage;
 	protected double ramDamageBonus;
@@ -77,7 +77,7 @@ public class BattleResults implements java.io.Serializable, Comparable<BattleRes
 		this.score = score;
 		this.survival = survival;
 		this.lastSurvivorBonus = lastSurvivorBonus;
-		this.bulletDamage = bulletDamage;
+		this.setBulletDamage(bulletDamage);
 		this.bulletDamageBonus = bulletDamageBonus;
 		this.ramDamage = ramDamage;
 		this.ramDamageBonus = ramDamageBonus;
@@ -137,8 +137,8 @@ public class BattleResults implements java.io.Serializable, Comparable<BattleRes
 	 *
 	 * @return the bullet damage score of this robot in the battle.
 	 */
-	public int getBulletDamage() {
-		return (int) (bulletDamage + 0.5);
+	public int getBulletDamageResult() {
+		return (int) (getBulletDamage() + 0.5);
 	}
 
 	/**
@@ -236,6 +236,14 @@ public class BattleResults implements java.io.Serializable, Comparable<BattleRes
 		return new SerializableHelper();
 	}
 
+	public double getBulletDamage() {
+		return bulletDamage;
+	}
+
+	public void setBulletDamage(double bulletDamage) {
+		this.bulletDamage = bulletDamage;
+	}
+
 	private static class SerializableHelper implements ISerializableHelper {
 		public int sizeOf(RbSerializer serializer, Object object) {
 			BattleResults obj = (BattleResults) object;
@@ -252,7 +260,7 @@ public class BattleResults implements java.io.Serializable, Comparable<BattleRes
 			serializer.serialize(buffer, obj.score);
 			serializer.serialize(buffer, obj.survival);
 			serializer.serialize(buffer, obj.lastSurvivorBonus);
-			serializer.serialize(buffer, obj.bulletDamage);
+			serializer.serialize(buffer, obj.getBulletDamage());
 			serializer.serialize(buffer, obj.bulletDamageBonus);
 			serializer.serialize(buffer, obj.ramDamage);
 			serializer.serialize(buffer, obj.ramDamageBonus);

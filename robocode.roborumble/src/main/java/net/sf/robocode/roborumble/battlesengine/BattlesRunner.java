@@ -24,7 +24,7 @@ import java.util.*;
  * Reads a file with the battles to be runned and outputs the results in another file.
  * Controlled by properties files.
  *
- * @author Albert Pérez (original)
+ * @author Albert Pï¿½rez (original)
  * @author Flemming N. Larsen (contributor)
  * @author Joachim Hofer (contributor)
  */
@@ -193,8 +193,8 @@ public class BattlesRunner {
 							: bot2.getNameAndVersion();
 					int points1 = results[i].getScore();
 					int points2 = results[j].getScore();
-					int bullets1 = results[i].getBulletDamage();
-					int bullets2 = results[j].getBulletDamage();
+					int bullets1 = results[i].getBulletDamageResult();
+					int bullets2 = results[j].getBulletDamageResult();
 					int survival1 = results[i].getFirsts();
 					int survival2 = results[j].getFirsts();
 

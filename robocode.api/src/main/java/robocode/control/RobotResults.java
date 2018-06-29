@@ -71,7 +71,7 @@ public class RobotResults extends BattleResults {
 			RobotSpecification robot,
 			BattleResults results) {
 		super(results.getTeamLeaderName(), results.getRank(), results.getScore(), results.getSurvival(),
-				results.getLastSurvivorBonus(), results.getBulletDamage(), results.getBulletDamageBonus(),
+				results.getLastSurvivorBonus(), results.getBulletDamageResult(), results.getBulletDamageBonus(),
 				results.getRamDamage(), results.getRamDamageBonus(), results.getFirsts(), results.getSeconds(),
 				results.getThirds());
 		this.robot = robot;
@@ -108,7 +108,7 @@ public class RobotResults extends BattleResults {
 		int result = 1;
 		long temp;
 
-		temp = Double.doubleToLongBits(bulletDamage);
+		temp = Double.doubleToLongBits(getBulletDamage());
 		result = prime * result + (int) (temp ^ (temp >>> 32));
 		temp = Double.doubleToLongBits(bulletDamageBonus);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -143,7 +143,7 @@ public class RobotResults extends BattleResults {
 		}
 		RobotResults other = (RobotResults) obj;
 
-		if (Double.doubleToLongBits(bulletDamage) != Double.doubleToLongBits(other.bulletDamage)) {
+		if (Double.doubleToLongBits(getBulletDamage()) != Double.doubleToLongBits(other.getBulletDamage())) {
 			return false;
 		}
 		if (Double.doubleToLongBits(bulletDamageBonus) != Double.doubleToLongBits(other.bulletDamageBonus)) {

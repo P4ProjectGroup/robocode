@@ -153,7 +153,7 @@ public class BattleResultsTableModel extends javax.swing.table.AbstractTableMode
 			return "" + (int) (statistics.getLastSurvivorBonus() + 0.5);
 
 		case 5:
-			return "" + (int) (statistics.getBulletDamage() + 0.5);
+			return "" + (int) (statistics.getBulletDamageResult() + 0.5);
 
 		case 6:
 			return "" + (int) (statistics.getBulletDamageBonus() + 0.5);
