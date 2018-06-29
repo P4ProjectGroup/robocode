@@ -5,11 +5,12 @@ cache:
   directories:
   - .autoconf
   - $HOME/.m2
-before_install: mvn checkstyle:checkstyle
 script: xvfb-run mvn test -B
+<<<<<<< HEAD
 after_succes:
   - ./push.sh
 
 env:
   global:
     - GH_TOKEN=ddddcf8d83c4504b75a74ed873b88630a98ce22f
+after_script: cobertura:check
