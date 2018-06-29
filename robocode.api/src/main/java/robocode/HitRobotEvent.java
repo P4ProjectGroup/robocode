@@ -139,7 +139,7 @@ public final class HitRobotEvent extends Event {
 		// The isMyFault has higher priority when it is set compared to when it is not set
 		if (event instanceof HitRobotEvent) {
 			int compare1 = (this).isMyFault() ? -1 : 0;
-    			int compare2 = ((HitRobotEvent) event).isMyFault() ? -1 :
+    			int compare2 = ((HitRobotEvent) event).isMyFault() ? -1 : 0;
 
 			return compare1 - compare2;
 		}
