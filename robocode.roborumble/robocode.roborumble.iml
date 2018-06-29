@@ -20,5 +20,6 @@
     <orderEntry type="module" module-name="robocode.battle" scope="RUNTIME" />
     <orderEntry type="module" module-name="robocode.host" scope="RUNTIME" />
     <orderEntry type="module" module-name="robocode.repository" scope="RUNTIME" />
+    <orderEntry type="module" module-name="robocode.battle.testrobots" scope="RUNTIME" />
   </component>
 </module>

@@ -265,6 +265,7 @@ public class RobotItem extends RobotSpecItem implements IRobotItem {
 		if (getFullClassName() != null) {
 			if (RobocodeProperties.isTestingOn()) {
 				urls.add(getFullClassName());
+				urls.add(getShortClassName());
 			} else {
 				urls.add(getUniqueFullClassName());
 			}

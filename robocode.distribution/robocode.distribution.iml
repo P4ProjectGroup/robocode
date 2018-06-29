@@ -20,6 +20,7 @@
     <orderEntry type="module" module-name="robocode.battle" />
     <orderEntry type="module" module-name="robocode.host" />
     <orderEntry type="module" module-name="robocode.repository" scope="RUNTIME" />
+    <orderEntry type="module" module-name="robocode.battle.testrobots" />
     <orderEntry type="module" module-name="robocode.ui.editor" />
     <orderEntry type="module" module-name="robocode.ui" />
     <orderEntry type="module" module-name="robocode.sound" scope="RUNTIME" />
