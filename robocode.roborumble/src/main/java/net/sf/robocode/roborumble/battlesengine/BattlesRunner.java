@@ -224,7 +224,7 @@ public class BattlesRunner {
 	class BattleObserver extends BattleAdaptor {
 		@Override
 		public void onBattleError(final BattleErrorEvent event) {
-			Logger.realErr.println(event.getError());
+			Logger.REAL_ERR.println(event.getError());
 		}
 
 		@Override

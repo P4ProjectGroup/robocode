@@ -330,7 +330,7 @@ public final class RobocodeMain extends RobocodeMainBase {
 
 		try {
 			if (setup.resultsFilename == null) {
-				out = Logger.realOut;
+				out = Logger.REAL_OUT;
 			} else {
 				File f = new File(setup.resultsFilename);
 	
@@ -381,14 +381,14 @@ public final class RobocodeMain extends RobocodeMainBase {
 		@Override
 		public void onBattleMessage(BattleMessageEvent event) {
 			if (System.getProperty("logMessages", "true").equalsIgnoreCase("true")) {
-				Logger.realOut.println(event.getMessage());
+				Logger.REAL_OUT.println(event.getMessage());
 			}
 		}
 
 		@Override
 		public void onBattleError(BattleErrorEvent event) {
 			if (System.getProperty("logErrors", "true").equalsIgnoreCase("true")) {
-				Logger.realErr.println(event.getError());
+				Logger.REAL_ERR.println(event.getError());
 			}
 		}
 	}

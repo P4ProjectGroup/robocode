@@ -25,8 +25,8 @@ import java.io.PrintStream;
  * @author Mathew A. Nelson (original)
  */
 public class Logger {
-	public static final PrintStream realOut = System.out;
-	public static final PrintStream realErr = System.err;
+	public static final PrintStream REAL_OUT = System.out;
+	public static final PrintStream REAL_ERR = System.err;
 
 	private static IBattleListener logListener;
 	
@@ -45,10 +45,10 @@ public class Logger {
 			if (System.getProperty("logMessages", "true").equalsIgnoreCase("true")) {
 				s = StringUtil.toBasicLatin(s);
 				if (newline) {
-					realOut.println(s);
+					REAL_OUT.println(s);
 				} else {
-					realOut.print(s);
-					realOut.flush();
+					REAL_OUT.print(s);
+					REAL_OUT.flush();
 				}
 			}
 		} else {
@@ -83,7 +83,7 @@ public class Logger {
 		if (logListener == null) {
 			if (System.getProperty("logErrors", "true").equalsIgnoreCase("true")) {
 				s = StringUtil.toBasicLatin(s);
-				realErr.println(s);
+				REAL_ERR.println(s);
 			}
 		} else {
 			logListener.onBattleError(new BattleErrorEvent(s));

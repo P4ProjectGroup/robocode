@@ -65,21 +65,21 @@ public abstract class RobocodeTestBed extends BattleAdaptor {
 				throw new Error("Unknown directory: " + currentDirAbsolutePath);
 			}
 		} catch (IOException e) {
-			e.printStackTrace(Logger.realErr);
+			e.printStackTrace(Logger.REAL_ERR);
 		}
 		System.setProperty("ROBOTPATH", robotsPath + "/target/classes");
 
 		engine = new RobocodeEngine(new BattleAdaptor() {
 			public void onBattleMessage(BattleMessageEvent event) {
 				if (isDumpingMessages) {
-					Logger.realOut.println(event.getMessage());
+					Logger.REAL_OUT.println(event.getMessage());
 				}
 				messages++;
 			}
 
 			public void onBattleError(BattleErrorEvent event) {
 				if (isDumpingErrors) {
-					Logger.realErr.println(event.getError());
+					Logger.REAL_ERR.println(event.getError());
 				}
 				errorText.append("----------err #");
 				errorText.append(errors);
@@ -104,21 +104,21 @@ public abstract class RobocodeTestBed extends BattleAdaptor {
 
 	public void onTurnEnded(TurnEndedEvent event) {
 		if (isDumpingTurns) {
-			Logger.realOut.println("turn " + event.getTurnSnapshot().getTurn());
+			Logger.REAL_OUT.println("turn " + event.getTurnSnapshot().getTurn());
 		}
 		for (IRobotSnapshot robot : event.getTurnSnapshot().getRobots()) {
 			if (isDumpingPositions) {
-				Logger.realOut.print(robot.getVeryShortName());
-				Logger.realOut.print(" X:");
-				Logger.realOut.print(robot.getX());
-				Logger.realOut.print(" Y:");
-				Logger.realOut.print(robot.getY());
-				Logger.realOut.print(" V:");
-				Logger.realOut.print(robot.getVelocity());
-				Logger.realOut.println();
+				Logger.REAL_OUT.print(robot.getVeryShortName());
+				Logger.REAL_OUT.print(" X:");
+				Logger.REAL_OUT.print(robot.getX());
+				Logger.REAL_OUT.print(" Y:");
+				Logger.REAL_OUT.print(robot.getY());
+				Logger.REAL_OUT.print(" V:");
+				Logger.REAL_OUT.print(robot.getVelocity());
+				Logger.REAL_OUT.println();
 			}
 			if (isDumpingOutput) {
-				Logger.realOut.print(robot.getOutputStreamSnapshot());
+				Logger.REAL_OUT.print(robot.getOutputStreamSnapshot());
 			}
 		}
 	}

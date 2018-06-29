@@ -42,8 +42,8 @@ public class HostManager implements IHostManager {
 	}
 
 	private static void initStreams() {
-		PrintStream sysout = new SecurePrintStream(Logger.realOut, true);
-		PrintStream syserr = new SecurePrintStream(Logger.realErr, true);
+		PrintStream sysout = new SecurePrintStream(Logger.REAL_OUT, true);
+		PrintStream syserr = new SecurePrintStream(Logger.REAL_ERR, true);
 		InputStream sysin = new SecureInputStream(System.in);
 
 		System.setOut(sysout);

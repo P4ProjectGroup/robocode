@@ -1372,7 +1372,7 @@ public final class RobotPeer implements IRobotPeerBattle, IRobotPeer {
 			}
 		}
 		if (Double.isNaN(bodyHeading)) {
-			Logger.realErr.println("HOW IS HEADING NAN HERE");
+			Logger.REAL_ERR.println("HOW IS HEADING NAN HERE");
 		}
 	}
 
