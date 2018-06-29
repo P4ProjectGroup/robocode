@@ -40,7 +40,7 @@ public class Utils {
 	 */
 	public static double normalAbsoluteAngle(double angle) {
 		result = angle + TWO_PI;
-		if ( angle % TWO_PI) >= 0 {
+		if ( angle % TWO_PI >= 0 ) {
 			result = angle;	
 		}
 		
