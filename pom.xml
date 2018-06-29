@@ -21,6 +21,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 		<module>robocode.sound</module>
 		<module>robocode.samples</module>
 		<module>robocode.roborumble</module>
+		<module>robocode.tests.robots</module>
+		<module>robocode.tests</module>
 		<module>robocode.installer</module>
 		<module>robocode.repository</module>
 		<module>robocode.content</module>
@@ -74,29 +76,8 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.7</version>
-				<configuration>
-					<check>
-						<haltOnFailure>false</haltOnFailure>
-						<branchRate>85</branchRate>
-						<lineRate>85</lineRate>
-						<totalBranchRate>85</totalBranchRate>
-						<totalLineRate>85</totalLineRate>
-						<packageLineRate>85</packageLineRate>
-						<packageBranchRate>85</packageBranchRate>
-					</check>
-				</configuration>
-				<executions>
-					<execution>
-						<id>validate</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
