@@ -6,6 +6,7 @@ cache:
   - .autoconf
   - $HOME/.m2
 script: xvfb-run mvn test -B
+before_install: mvn checkstyle:check
 after_script: cobertura:check
 
 env:
