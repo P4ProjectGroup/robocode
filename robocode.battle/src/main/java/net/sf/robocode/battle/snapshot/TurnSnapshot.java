@@ -164,6 +164,11 @@ public final class TurnSnapshot implements java.io.Serializable, IXmlSerializabl
 		return scores.toArray(new IScoreSnapshot[scores.size()]);
 	}
 
+
+	public IRobotSnapshot getCurrentWinner() {
+		return null;
+	}
+
 	public void stripDetails(SerializableOptions options) {
 		for (IRobotSnapshot r : getRobots()) {
 			((RobotSnapshot) r).stripDetails(options);

@@ -53,6 +53,8 @@ public class TestScoring extends RobocodeTestBed {
 
 			Assert.assertNear(currentScore, score.getCurrentScore());
 		}
+
+		Assert.assertEquals(lastTurnSnapshot.getCurrentWinner().getName(), "");
 	}
 
 	@Override

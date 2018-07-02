@@ -72,4 +72,6 @@ public interface ITurnSnapshot {
 	 * @see #getSortedTeamScores()
 	 */
 	IScoreSnapshot[] getIndexedTeamScores();
+
+	IRobotSnapshot getCurrentWinner();
 }
