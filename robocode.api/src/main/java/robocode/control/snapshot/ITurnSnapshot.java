@@ -76,4 +76,6 @@ public interface ITurnSnapshot {
 	IScoreSnapshot[] getIndexedTeamScores();
 
 	Map.Entry<IRobotSnapshot, IScoreSnapshot> getCurrentWinner();
+
+	Map.Entry<IRobotSnapshot, IScoreSnapshot> getCurrentLoser();
 }

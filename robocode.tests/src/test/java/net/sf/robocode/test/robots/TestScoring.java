@@ -54,12 +54,19 @@ public class TestScoring extends RobocodeTestBed {
 			Assert.assertNear(currentScore, score.getCurrentScore());
 		}
 
-		IScoreSnapshot score = lastTurnSnapshot.getSortedTeamScores()[0];
-		double currentScore = score.getCurrentSurvivalScore() + score.getCurrentBulletDamageScore()
-				+ score.getCurrentBulletKillBonus() + score.getCurrentRammingDamageScore()
-				+ score.getCurrentRammingKillBonus() + score.getCurrentSurvivalBonus();
+		IScoreSnapshot winnerScore = lastTurnSnapshot.getSortedTeamScores()[0];
+		double currentWinnerScore = winnerScore.getCurrentSurvivalScore() + winnerScore.getCurrentBulletDamageScore()
+				+ winnerScore.getCurrentBulletKillBonus() + winnerScore.getCurrentRammingDamageScore()
+				+ winnerScore.getCurrentRammingKillBonus() + winnerScore.getCurrentSurvivalBonus();
 
-		Assert.assertNear(currentScore, lastTurnSnapshot.getCurrentWinner().getValue().getCurrentScore());
+		Assert.assertNear(currentWinnerScore, lastTurnSnapshot.getCurrentWinner().getValue().getCurrentScore());
+
+		IScoreSnapshot loserScore = lastTurnSnapshot.getSortedTeamScores()[lastTurnSnapshot.getSortedTeamScores().length - 1];
+		double loserCurrentScore = loserScore.getCurrentSurvivalScore() + loserScore.getCurrentBulletDamageScore()
+				+ loserScore.getCurrentBulletKillBonus() + loserScore.getCurrentRammingDamageScore()
+				+ loserScore.getCurrentRammingKillBonus() + loserScore.getCurrentSurvivalBonus();
+
+		Assert.assertNear(loserCurrentScore, lastTurnSnapshot.getCurrentLoser().getValue().getCurrentScore());
 	}
 
 	@Override

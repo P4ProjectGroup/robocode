@@ -200,6 +200,10 @@ public final class TurnSnapshot implements java.io.Serializable, IXmlSerializabl
 		return results;
 	}
 
+	public Map.Entry<IRobotSnapshot, IScoreSnapshot> getCurrentLoser(){
+		return null;
+	}
+
 
 	public void stripDetails(SerializableOptions options) {
 		for (IRobotSnapshot r : getRobots()) {
