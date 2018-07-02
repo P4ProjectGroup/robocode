@@ -165,7 +165,7 @@ public final class TurnSnapshot implements java.io.Serializable, IXmlSerializabl
 	}
 
 
-	public IRobotSnapshot getCurrentWinner() {
+	public Map.Entry<IRobotSnapshot, IScoreSnapshot> getCurrentWinner() {
 		Map<IRobotSnapshot, IScoreSnapshot> results = getScoreMap();
 
 		Map.Entry<IRobotSnapshot, IScoreSnapshot> maxEntry = null;
@@ -177,7 +177,7 @@ public final class TurnSnapshot implements java.io.Serializable, IXmlSerializabl
 				maxEntry = entry;
 			}
 		}
-		return maxEntry.getKey();
+		return maxEntry;
 	}
 
 	private Map<IRobotSnapshot, IScoreSnapshot> getScoreMap() {

@@ -8,6 +8,8 @@
 package robocode.control.snapshot;
 
 
+import java.util.Map;
+
 /**
  * Interface of a battle turn snapshot at a specific time in a battle.
  * 
@@ -73,5 +75,5 @@ public interface ITurnSnapshot {
 	 */
 	IScoreSnapshot[] getIndexedTeamScores();
 
-	IRobotSnapshot getCurrentWinner();
+	Map.Entry<IRobotSnapshot, IScoreSnapshot> getCurrentWinner();
 }

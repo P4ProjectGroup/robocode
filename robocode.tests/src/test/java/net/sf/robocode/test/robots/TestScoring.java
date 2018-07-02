@@ -54,7 +54,12 @@ public class TestScoring extends RobocodeTestBed {
 			Assert.assertNear(currentScore, score.getCurrentScore());
 		}
 
-		Assert.assertEquals(lastTurnSnapshot.getCurrentWinner().getName(), "");
+		IScoreSnapshot score = lastTurnSnapshot.getSortedTeamScores()[0];
+		double currentScore = score.getCurrentSurvivalScore() + score.getCurrentBulletDamageScore()
+				+ score.getCurrentBulletKillBonus() + score.getCurrentRammingDamageScore()
+				+ score.getCurrentRammingKillBonus() + score.getCurrentSurvivalBonus();
+
+		Assert.assertNear(currentScore, lastTurnSnapshot.getCurrentWinner().getValue().getCurrentScore());
 	}
 
 	@Override
