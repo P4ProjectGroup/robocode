@@ -201,7 +201,18 @@ public final class TurnSnapshot implements java.io.Serializable, IXmlSerializabl
 	}
 
 	public Map.Entry<IRobotSnapshot, IScoreSnapshot> getCurrentLoser(){
-		return null;
+		Map<IRobotSnapshot, IScoreSnapshot> results = getScoreMap();
+
+		Map.Entry<IRobotSnapshot, IScoreSnapshot> minEntry = null;
+
+		for (Map.Entry<IRobotSnapshot, IScoreSnapshot> entry : results.entrySet())
+		{
+			if (minEntry == null || entry.getValue().compareTo(minEntry.getValue()) < 0)
+			{
+				minEntry = entry;
+			}
+		}
+		return minEntry;
 	}
 
 
