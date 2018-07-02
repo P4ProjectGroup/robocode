@@ -166,8 +166,40 @@ public final class TurnSnapshot implements java.io.Serializable, IXmlSerializabl
 
 
 	public IRobotSnapshot getCurrentWinner() {
-		return null;
+		Map<IRobotSnapshot, IScoreSnapshot> results = getScoreMap();
+
+		Map.Entry<IRobotSnapshot, IScoreSnapshot> maxEntry = null;
+
+		for (Map.Entry<IRobotSnapshot, IScoreSnapshot> entry : results.entrySet())
+		{
+			if (maxEntry == null || entry.getValue().compareTo(maxEntry.getValue()) > 0)
+			{
+				maxEntry = entry;
+			}
+		}
+		return maxEntry.getKey();
 	}
+
+	private Map<IRobotSnapshot, IScoreSnapshot> getScoreMap() {
+		// team scores are computed on demand from team scores to not duplicate data in the snapshot
+
+		Map<IRobotSnapshot, IScoreSnapshot> results = new HashMap<IRobotSnapshot, IScoreSnapshot>();
+
+		for (IRobotSnapshot robot : robots) {
+			results.put(robot, null);
+		}
+		for (IRobotSnapshot robot : robots) {
+			final IScoreSnapshot snapshot = results.get(robot);
+
+			IScoreSnapshot score = (snapshot == null)
+					? robot.getScoreSnapshot()
+					: new ScoreSnapshot(robot.getTeamName(), snapshot, robot.getScoreSnapshot());
+
+			results.put(robot, score);
+		}
+		return results;
+	}
+
 
 	public void stripDetails(SerializableOptions options) {
 		for (IRobotSnapshot r : getRobots()) {

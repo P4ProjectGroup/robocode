@@ -39,12 +39,7 @@ public class Utils {
 	 * @return the normalized angle that will be in the range of [0,2*PI[
 	 */
 	public static double normalAbsoluteAngle(double angle) {
-		double result = ( angle % TWO_PI ) + TWO_PI;
-		if ( angle % TWO_PI >= 0 ) {
-			result = angle % TWO_PI;	
-		}
-		
-		return result;
+		return  ( angle %= TWO_PI)>= 0 ? angle : ( angle + TWO_PI);
 	}
 
 	/**
